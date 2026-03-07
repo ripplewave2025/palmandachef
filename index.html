@@ -71,7 +71,10 @@
           <div class="visual-panel visual-panel-home reveal" data-reveal>
             <div class="panel-chip" data-i18n="homeChip">01 / Home</div>
             <div class="image-stage hero-stage">
-              <img src="assets/hero-1200.png" alt="Chef Palman hero portrait with signature grill and dishes" fetchpriority="high" />
+              <picture class="hero-picture">
+                <source media="(max-width: 760px)" srcset="assets/hero-mobile-portrait.jpg" />
+                <img src="assets/hero-1200.png" alt="Chef Palman hero portrait with signature grill and dishes" fetchpriority="high" />
+              </picture>
             </div>
             <div class="hero-caption">
               <p class="hero-kicker" data-i18n="heroKicker">Darjeeling</p>
@@ -157,3 +160,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
