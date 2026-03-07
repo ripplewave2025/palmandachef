@@ -1,19 +1,10 @@
 ﻿# Chef Palman Portfolio
 
-Data-driven premium portfolio site for Chef Palman, built for direct deployment on Vercel.
+Single-page photo-first portfolio with 4 full-screen sections:
 
-## Files
+1. Hero image
+2. About image
+3. Service-area image
+4. Details and contact
 
-- `index.html`: page structure
-- `styles.css`: custom responsive styling and motion
-- `script.js`: language toggle, mobile menu, scroll reveals, and interactive location previews
-- `assets/`: optimized images generated from the provided source artwork
-
-## Contact
-
-- Phone and WhatsApp: `+91 7001683190`
-- WhatsApp links are already wired in the navbar and CTA sections
-
-## Deploy
-
-Import this repository into Vercel as a static site. No build command is required.
+The site includes a compact language toggle near the menu, direct WhatsApp booking, and mobile-friendly snap navigation.
