@@ -6,7 +6,7 @@
     <title>Chef Palman | Portfolio</title>
     <meta
       name="description"
-      content="Chef Palman portfolio with photo-first sections, language toggle, and direct WhatsApp booking."
+      content="Chef Palman portfolio with a full-screen mobile hero, photo-first sections, and direct WhatsApp booking."
     />
     <meta name="theme-color" content="#090807" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,51 +58,38 @@
       </div>
     </header>
 
-    <aside class="page-dots" aria-label="Section navigation">
-      <a href="#home" class="page-dot is-active" data-page="home"><span>01</span></a>
-      <a href="#about" class="page-dot" data-page="about"><span>02</span></a>
-      <a href="#service" class="page-dot" data-page="service"><span>03</span></a>
-      <a href="#details" class="page-dot" data-page="details"><span>04</span></a>
-    </aside>
-
     <main>
-      <section class="page" id="home" data-page="home">
-        <div class="page-shell">
+      <section class="page page-hero" id="home" data-page="home">
+        <div class="page-shell page-shell-hero">
           <div class="visual-panel visual-panel-home reveal" data-reveal>
-            <div class="panel-chip" data-i18n="homeChip">01 / Home</div>
             <div class="image-stage hero-stage">
               <picture class="hero-picture">
                 <source media="(max-width: 760px)" srcset="assets/hero-mobile-portrait.jpg" />
                 <img src="assets/hero-1200.png" alt="Chef Palman hero portrait with signature grill and dishes" fetchpriority="high" />
               </picture>
             </div>
-            <div class="hero-caption">
-              <p class="hero-kicker" data-i18n="heroKicker">Darjeeling</p>
-              <h1>Chef Palman</h1>
-              <p data-i18n="heroSubtitle">Executive Chef and premium catering service</p>
-              <a class="hero-button" href="#details" data-i18n="heroButton">Open details</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="page page-about-photo" id="about" data-page="about">
+        <div class="page-shell">
+          <div class="visual-panel visual-panel-full reveal" data-reveal>
+            <div class="image-stage about-stage">
+              <img src="assets/about-photo-portrait.jpg" alt="Chef Palman portrait" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="page" id="about" data-page="about">
+      <section class="page page-service" id="service" data-page="service">
         <div class="page-shell">
-          <div class="visual-panel reveal" data-reveal>
-            <div class="panel-chip" data-i18n="aboutChip">02 / About</div>
-            <div class="image-stage">
-              <img src="assets/aboutme-1600.jpg" alt="About Chef Palman artwork" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="page" id="service" data-page="service">
-        <div class="page-shell">
-          <div class="visual-panel reveal" data-reveal>
-            <div class="panel-chip" data-i18n="serviceChip">03 / Service area</div>
+          <div class="visual-panel visual-panel-full reveal" data-reveal>
             <div class="image-stage service-image-stage">
-              <img src="assets/service-location-1400.png" alt="Chef Palman service locations artwork" />
+              <picture class="service-picture">
+                <source media="(max-width: 760px)" srcset="assets/service-mobile-crop.jpg" />
+                <img src="assets/service-location-1400.png" alt="Chef Palman service locations artwork" />
+              </picture>
             </div>
           </div>
         </div>
@@ -110,13 +97,8 @@
 
       <section class="page page-details" id="details" data-page="details">
         <div class="page-shell">
-          <div class="details-layout reveal" data-reveal>
-            <div class="details-portrait">
-              <div class="panel-chip" data-i18n="detailsChip">04 / Details</div>
-              <img src="assets/aboutme-1600.jpg" alt="Chef Palman portrait" />
-            </div>
-
-            <div class="details-card">
+          <div class="details-shell reveal" data-reveal>
+            <article class="details-card details-card-full">
               <p class="details-label" data-i18n="detailsLabel">About Me</p>
               <h2 data-i18n="detailsTitle">Worked in top hotels and restaurants in Bengaluru, Karnataka</h2>
               <ul class="hotel-list">
@@ -151,7 +133,7 @@
                 <span class="social-slot">Instagram</span>
                 <a class="social-slot is-live" href="https://wa.me/917001683190?text=Hello%20Chef%20Palman,%20I%20want%20to%20book%20catering." target="_blank" rel="noreferrer">WhatsApp</a>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -160,4 +142,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
