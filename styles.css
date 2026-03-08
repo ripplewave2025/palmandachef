@@ -865,3 +865,30 @@ body.menu-open .menu-panel {
     transform: none;
   }
 }
+
+@media (max-width: 760px) {
+  .hero-shell {
+    align-items: flex-start;
+  }
+
+  .hero-card {
+    margin-top: 0.45rem;
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01)),
+      rgba(8, 8, 8, 0.46);
+  }
+
+  .hero-card h1 {
+    max-width: 10ch;
+    font-size: clamp(2.35rem, 10.5vw, 3.85rem);
+  }
+
+  .hero-body {
+    font-size: 0.96rem;
+    line-height: 1.58;
+  }
+
+  .hero-actions {
+    margin-top: 1rem;
+  }
+}
