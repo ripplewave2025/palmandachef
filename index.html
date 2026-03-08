@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chef Palman | Portfolio</title>
+    <title>Chef Palman | Darjeeling Catering</title>
     <meta
       name="description"
-      content="Chef Palman portfolio with a full-screen mobile hero, photo-first sections, and direct WhatsApp booking."
+      content="Chef Palman portfolio with full-photo sections, language switching, and direct WhatsApp booking for Darjeeling catering."
     />
-    <meta name="theme-color" content="#090807" />
+    <meta name="theme-color" content="#0a0908" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Marcellus&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="ambient" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
 
     <header class="topbar" id="topbar">
       <div class="topbar-shell">
@@ -26,19 +26,49 @@
           <span class="brand-mark">P</span>
           <span class="brand-copy">
             <span class="brand-title">Chef Palman</span>
-            <span class="brand-subtitle" data-i18n="brandSubtitle">Executive Chef</span>
+            <span class="brand-subtitle" data-i18n="brandSubtitle">Darjeeling Catering</span>
           </span>
         </a>
 
-        <div class="control-bar">
-          <div class="language-bar" aria-label="Language toggle">
-            <button class="lang-pill is-active" type="button" data-lang="en" aria-pressed="true">EN</button>
-            <button class="lang-pill" type="button" data-lang="ne" aria-pressed="false">NE</button>
-            <button class="lang-pill" type="button" data-lang="bn" aria-pressed="false">BN</button>
-            <button class="lang-pill" type="button" data-lang="bh" aria-pressed="false">BH</button>
+        <div class="toolbar">
+          <div class="language-menu" id="languageMenu">
+            <button
+              class="language-trigger"
+              id="languageTrigger"
+              type="button"
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="languageList"
+              aria-label="Open language menu"
+            >
+              <span class="language-ring"></span>
+              <span class="language-core"></span>
+            </button>
+
+            <div class="language-list" id="languageList" role="menu" aria-label="Select language">
+              <button class="language-option is-active" type="button" data-lang="en" role="menuitemradio" aria-checked="true">
+                English
+              </button>
+              <button class="language-option" type="button" data-lang="ne" role="menuitemradio" aria-checked="false">
+                नेपाली
+              </button>
+              <button class="language-option" type="button" data-lang="bn" role="menuitemradio" aria-checked="false">
+                বাংলা
+              </button>
+              <button class="language-option" type="button" data-lang="dz" role="menuitemradio" aria-checked="false">
+                རྫོང་ཁ
+              </button>
+            </div>
           </div>
 
-          <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="menuPanel" aria-label="Open menu">
+          <button
+            class="menu-button"
+            id="menuButton"
+            type="button"
+            aria-expanded="false"
+            aria-controls="menuPanel"
+            aria-label="Open menu"
+          >
             <span></span>
             <span></span>
             <span></span>
@@ -48,90 +78,181 @@
         <nav class="menu-panel" id="menuPanel" aria-label="Main menu">
           <a href="#home" data-i18n="navHome">Home</a>
           <a href="#about" data-i18n="navAbout">About</a>
-          <a href="#service" data-i18n="navService">Service</a>
-          <a href="#details" data-i18n="navDetails">Details</a>
+          <a href="#services" data-i18n="navServices">Services</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+
           <div class="menu-actions">
-            <a class="menu-link is-primary" href="https://wa.me/917001683190?text=Hello%20Chef%20Palman,%20I%20want%20to%20book%20catering." target="_blank" rel="noreferrer" data-i18n="menuWhatsapp">WhatsApp</a>
+            <a
+              class="menu-link is-primary"
+              href="https://wa.me/917001683190?text=Hello%20Chef%20Palman,%20I%20want%20to%20book%20catering."
+              target="_blank"
+              rel="noreferrer"
+              data-i18n="menuWhatsapp"
+            >
+              WhatsApp
+            </a>
             <a class="menu-link" href="tel:+917001683190">+91 7001683190</a>
+          </div>
+
+          <div class="menu-socials">
+            <span data-i18n="facebookPlaceholder">Facebook link space</span>
+            <span data-i18n="instagramPlaceholder">Instagram link space</span>
           </div>
         </nav>
       </div>
     </header>
 
     <main>
-      <section class="page page-hero" id="home" data-page="home">
-        <div class="page-shell page-shell-hero">
-          <div class="visual-panel visual-panel-home reveal" data-reveal>
-            <div class="image-stage hero-stage">
-              <picture class="hero-picture">
-                <source media="(max-width: 760px)" srcset="assets/hero-mobile-portrait.jpg" />
-                <img src="assets/hero-1200.png" alt="Chef Palman hero portrait with signature grill and dishes" fetchpriority="high" />
-              </picture>
+      <section class="section hero-section" id="home">
+        <div class="section-media hero-media">
+          <img
+            src="assets/hero-market-wide.jpg"
+            alt="Chef Palman cooking at a lively market with signature dishes in front."
+            fetchpriority="high"
+          />
+        </div>
+        <div class="section-shade hero-shade"></div>
+
+        <div class="section-shell hero-shell">
+          <div class="hero-card reveal" data-reveal>
+            <p class="eyebrow" data-i18n="heroEyebrow">Chef Palman</p>
+            <h1 data-i18n="heroTitle">Premium catering with the warmth of Darjeeling.</h1>
+            <p class="hero-body" data-i18n="heroBody">
+              From private dinners to village events, Chef Palman brings live grilling, soulful food, and a refined guest experience.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="button button-primary magnetic"
+                href="https://wa.me/917001683190?text=Hello%20Chef%20Palman,%20I%20want%20to%20book%20catering."
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="heroPrimary"
+              >
+                Book on WhatsApp
+              </a>
+              <a class="button button-secondary" href="#services" data-i18n="heroSecondary">View services</a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="page page-about-photo" id="about" data-page="about">
-        <div class="page-shell">
-          <div class="visual-panel visual-panel-full reveal" data-reveal>
-            <div class="image-stage about-stage">
-              <img src="assets/about-photo-portrait.jpg" alt="Chef Palman portrait" />
-            </div>
+      <section class="section photo-section about-section" id="about">
+        <div class="section-media about-media">
+          <img src="assets/about-clean-portrait.jpg" alt="Chef Palman portrait with crossed arms." />
+        </div>
+        <div class="section-shade about-shade"></div>
+
+        <div class="section-shell photo-shell">
+          <div class="photo-note reveal" data-reveal>
+            <span class="eyebrow" data-i18n="portraitEyebrow">Chef Portrait</span>
+            <strong>Chef Palman</strong>
           </div>
         </div>
       </section>
 
-      <section class="page page-service" id="service" data-page="service">
-        <div class="page-shell">
-          <div class="visual-panel visual-panel-full reveal" data-reveal>
-            <div class="image-stage service-image-stage">
-              <picture class="service-picture">
-                <source media="(max-width: 760px)" srcset="assets/service-mobile-crop.jpg" />
-                <img src="assets/service-location-1400.png" alt="Chef Palman service locations artwork" />
-              </picture>
-            </div>
-          </div>
+      <section class="section service-section" id="services">
+        <div class="section-media service-media">
+          <img src="assets/service-hero-smile.jpg" alt="Chef Palman presenting momo and soup dishes." />
         </div>
-      </section>
+        <div class="section-shade service-shade"></div>
 
-      <section class="page page-details" id="details" data-page="details">
-        <div class="page-shell">
-          <div class="details-shell reveal" data-reveal>
-            <article class="details-card details-card-full">
-              <p class="details-label" data-i18n="detailsLabel">About Me</p>
-              <h2 data-i18n="detailsTitle">Worked in top hotels and restaurants in Bengaluru, Karnataka</h2>
-              <ul class="hotel-list">
-                <li>Eagelton</li>
-                <li>Taj</li>
-                <li>Sangrilla</li>
-                <li>Triboo</li>
-                <li>Goldflinch</li>
+        <div class="section-shell service-shell">
+          <div class="service-layout reveal" data-reveal>
+            <div class="section-copy">
+              <p class="eyebrow" data-i18n="servicesEyebrow">Interactive Service</p>
+              <h2 data-i18n="servicesTitle">Choose the format that fits your event.</h2>
+              <p data-i18n="servicesBody">Tap a service to preview the experience.</p>
+            </div>
+
+            <div class="service-tabs" role="tablist" aria-label="Service choices">
+              <button class="service-tab is-active" type="button" data-service="grill" role="tab" aria-selected="true" data-i18n="serviceGrillLabel">
+                Momos &amp; Grill
+              </button>
+              <button class="service-tab" type="button" data-service="feast" role="tab" aria-selected="false" data-i18n="serviceFeastLabel">
+                Family Feast
+              </button>
+              <button class="service-tab" type="button" data-service="village" role="tab" aria-selected="false" data-i18n="serviceVillageLabel">
+                Village Events
+              </button>
+            </div>
+
+            <article class="service-card" id="serviceCard" aria-live="polite">
+              <p class="service-kicker" data-service-field="kicker">Signature live counter</p>
+              <h3 data-service-field="title">Palman's Momos &amp; Grill</h3>
+              <p class="service-body" data-service-field="body">
+                Fresh momos, smoke, sauces, and live finishing that keeps guests gathered around the food.
+              </p>
+              <ul class="service-points">
+                <li data-service-point="0">Live grilling and finishing</li>
+                <li data-service-point="1">Best for evening events</li>
+                <li data-service-point="2">Premium street-food energy</li>
               </ul>
-              <p class="details-body" data-i18n="detailsBody">
-                Now living in Lamahatta, Darjeeling with his lovely family and serving locally with top quality food through catering service.
+            </article>
+
+            <div class="coverage-pill">
+              <span data-i18n="coverageLabel">Serving</span>
+              <p data-i18n="coverageValue">Darjeeling, Kalimpong, Kurseong, Sikkim, Siliguri</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="section-media contact-media">
+          <img src="assets/hero-market-wide.jpg" alt="Chef Palman event atmosphere background." aria-hidden="true" />
+        </div>
+        <div class="section-shade contact-shade"></div>
+
+        <div class="section-shell contact-shell">
+          <div class="contact-layout reveal" data-reveal>
+            <article class="story-card">
+              <p class="eyebrow" data-i18n="detailsEyebrow">About Chef Palman</p>
+              <h2 data-i18n="detailsTitle">Experience built in Bengaluru, now serving Darjeeling.</h2>
+              <p data-i18n="detailsBody">
+                Worked in top hotels and restaurants including Eagelton, Taj, Sangrilla, Triboo, and Goldflinch. Now living in Lamahatta with family and serving local celebrations with quality food.
               </p>
 
-              <div class="details-meta">
-                <div>
-                  <span class="meta-title" data-i18n="serviceAreaLabel">Service area</span>
-                  <p data-i18n="serviceAreaValue">Darjeeling, Kalimpong, Kurseong, Sikkim, Siliguri</p>
+              <div class="info-grid">
+                <div class="info-block">
+                  <span data-i18n="experienceLabel">Experience</span>
+                  <p data-i18n="experienceValue">Eagelton, Taj, Sangrilla, Triboo, Goldflinch</p>
                 </div>
-                <div>
-                  <span class="meta-title" data-i18n="contactLabel">Contact</span>
-                  <p>+91 7001683190</p>
+                <div class="info-block">
+                  <span data-i18n="locationLabel">Base</span>
+                  <p data-i18n="locationValue">Lamahatta, Darjeeling</p>
+                </div>
+                <div class="info-block">
+                  <span data-i18n="coverageLabel">Serving</span>
+                  <p data-i18n="coverageValue">Darjeeling, Kalimpong, Kurseong, Sikkim, Siliguri</p>
                 </div>
               </div>
+            </article>
 
-              <div class="details-actions">
-                <a class="action-button is-primary" href="https://wa.me/917001683190?text=Hello%20Chef%20Palman,%20I%20want%20to%20book%20catering." target="_blank" rel="noreferrer" data-i18n="whatsappButton">WhatsApp</a>
-                <a class="action-button" href="tel:+917001683190" data-i18n="callButton">Call</a>
+            <article class="contact-card">
+              <p class="eyebrow" data-i18n="contactEyebrow">Contact</p>
+              <h3 data-i18n="contactTitle">Book Chef Palman directly.</h3>
+              <p data-i18n="contactBody">
+                WhatsApp is the fastest way to confirm availability. Facebook and Instagram links can be added later.
+              </p>
+
+              <div class="contact-actions">
+                <a
+                  class="button button-primary magnetic"
+                  href="https://wa.me/917001683190?text=Hello%20Chef%20Palman,%20I%20want%20to%20book%20catering."
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="contactPrimary"
+                >
+                  Open WhatsApp
+                </a>
+                <a class="button button-secondary" href="tel:+917001683190">+91 7001683190</a>
               </div>
 
               <div class="social-row">
-                <span class="social-slot">Facebook</span>
-                <span class="social-slot">Instagram</span>
-                <a class="social-slot is-live" href="https://wa.me/917001683190?text=Hello%20Chef%20Palman,%20I%20want%20to%20book%20catering." target="_blank" rel="noreferrer">WhatsApp</a>
+                <span data-i18n="facebookPlaceholder">Facebook link space</span>
+                <span data-i18n="instagramPlaceholder">Instagram link space</span>
+                <span data-i18n="whatsappReady">WhatsApp ready</span>
               </div>
             </article>
           </div>
