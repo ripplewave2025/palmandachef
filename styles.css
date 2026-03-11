@@ -454,6 +454,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 .book-footer { text-align: center; padding-bottom: 0.5rem; }
 .book-footer__base { margin: 0; display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.76rem; color: var(--muted); }
 .book-footer__copy { margin: 0.4rem 0 0; font-size: 0.68rem; color: var(--dimmed); }
+.book-footer__links { margin: 0.8rem 0 0; font-size: 0.68rem; color: var(--dimmed); line-height: 1.6; }
+.book-footer__links a { color: var(--gold-soft); text-decoration: none; transition: filter 200ms ease; }
+.book-footer__links a:hover { filter: brightness(1.2); text-decoration: underline; }
 
 /* ══════════════════════════════════════════════════════
    SCROLL NUDGE

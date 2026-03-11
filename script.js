@@ -57,6 +57,8 @@ const i18n = {
     locSikkim:    "Sikkim",
     locSiliguri:  "Siliguri",
     locHome:      "★ Lamahatta",
+    footerLink1:  "Chef Palman from Lamahatta",
+    footerLink2:  "Built and managed with love by Upesh",
   },
 
   ne: {
@@ -110,6 +112,8 @@ const i18n = {
     locSikkim:    "सिक्किम",
     locSiliguri:  "शिलिगुडी",
     locHome:      "★ लामाहाट्टा",
+    footerLink1:  "लामाहाट्टाबाट शेफ पलमन",
+    footerLink2:  "उपेशद्वारा मायाले निर्मित र व्यवस्थित",
   },
 
   bn: {
@@ -163,6 +167,8 @@ const i18n = {
     locSikkim:    "সিকিম",
     locSiliguri:  "শিলিগুড়ি",
     locHome:      "★ লামাহাট্টা",
+    footerLink1:  "লামাহাট্টা থেকে শেফ পালমান",
+    footerLink2:  "উপেশ দ্বারা ভালোবাসার সাথে নির্মিত ও পরিচালিত",
   },
 
   hi: {
@@ -216,6 +222,8 @@ const i18n = {
     locSikkim:    "सिक्किम",
     locSiliguri:  "सिलीगुड़ी",
     locHome:      "★ लामाहट्टा",
+    footerLink1:  "लामाहट्टा से शेफ पलमन",
+    footerLink2:  "उपेश द्वारा प्यार से निर्मित और प्रबंधित",
   },
 
   dz: {
@@ -269,6 +277,8 @@ const i18n = {
     locSikkim:    "སིཀིམ",
     locSiliguri:  "སི་ལི་གུ་རི",
     locHome:      "★ ལཱ་མཱ་ཧཊ་ཊ",
+    footerLink1:  "ལཱ་མཱ་ཧཊ་ཊ་ལས་ཤེཕ་ཕལ་མན",
+    footerLink2:  "ཨུ་པེཤ་གྱིས་བྱམས་བརྩེའི་སྒོ་ནས་བཟོ་བཀོད་འབད་ཡོད",
   },
 };
 
