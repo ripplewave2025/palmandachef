@@ -1,110 +1,247 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chef Palman | Mobile Portfolio</title>
-    <meta
-      name="description"
-      content="Chef Palman mobile portfolio with three full-screen image story panels and a final contact page."
-    />
-    <meta name="theme-color" content="#080706" />
+    <title>Chef Palman | Executive Chef · Lamahatta, Darjeeling</title>
+    <meta name="description" content="Chef Palman – Executive Chef based in Lamahatta, Darjeeling. Premium catering across Darjeeling, Kalimpong, Kurseong, Sikkim and Siliguri." />
+    <meta name="theme-color" content="##080706" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+
+    <!-- ─── GLOBAL NAV (appears after hero) ─── -->
+    <header class="global-nav" id="globalNav">
+      <a class="nav-brand" href="#hero" aria-label="Chef Palman – back to top">
+        <span class="nav-brand-mark">P</span>
+        <span class="nav-brand-text">
+          <span class="nav-brand-name" data-i18n="chefName">Chef Palman</span>
+          <span class="nav-brand-sub" data-i18n="title">Executive Chef</span>
+        </span>
+      </a>
+      <button class="nav-hamburger" id="navHamburger" type="button" aria-expanded="false" aria-controls="navDrawer" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </header>
+
+    <nav class="nav-drawer" id="navDrawer">
+      <a href="#hero"    data-i18n="navHome">Home</a>
+      <a href="#service" data-i18n="navService">Service Area</a>
+      <a href="#chef"    data-i18n="navChef">Chef Palman</a>
+      <a href="#book"    data-i18n="navBook">Book & Contact</a>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+
     <main class="story">
-      <section class="story-panel story-panel-image" id="hero" aria-label="Chef Palman hero poster">
-        <img src="assets/hero-mobile-portrait.jpg" alt="Chef Palman hero poster" fetchpriority="high" />
+
+      <!-- ══════════════════════════════ PANEL 1 · HERO ══════════════════════════════ -->
+      <section class="panel panel-hero" id="hero">
+
+        <!-- Hero image — object-fit:contain so Chef Palman text is NEVER cut -->
+        <img
+          class="panel-hero__img"
+          src="portfolio_ready_images/heropage.png"
+          alt="Chef Palman – Executive Chef, Now in Darjeeling"
+          fetchpriority="high"
+          draggable="false"
+        />
+
+        <!-- Shimmer -->
+        <div class="panel-hero__shimmer" aria-hidden="true"></div>
+
+        <!-- ════ LANGUAGE SWITCHER (hero overlay) ════ -->
+        <div class="hero-lang-wrap" id="heroLangWrap" aria-label="Language switcher">
+          <p class="hero-lang-label" data-i18n="langLabel">Read in your language</p>
+          <div class="hero-lang-pill" role="tablist">
+            <button class="hlang-btn active" data-lang="en" role="tab" aria-selected="true">EN</button>
+            <span class="hlang-divider" aria-hidden="true"></span>
+            <button class="hlang-btn" data-lang="ne" role="tab" aria-selected="false">नेपाली</button>
+            <span class="hlang-divider" aria-hidden="true"></span>
+            <button class="hlang-btn" data-lang="bn" role="tab" aria-selected="false">বাংলা</button>
+            <span class="hlang-divider" aria-hidden="true"></span>
+            <button class="hlang-btn" data-lang="hi" role="tab" aria-selected="false">हिन्दी</button>
+            <span class="hlang-divider" aria-hidden="true"></span>
+            <button class="hlang-btn" data-lang="dz" role="tab" aria-selected="false">རྫོང་ཁ</button>
+          </div>
+        </div>
+
+        <!-- Scroll nudge -->
+        <button class="scroll-nudge" aria-label="Scroll down"
+          onclick="document.getElementById('service').scrollIntoView({behavior:'smooth'})">
+          <span class="scroll-nudge__line"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
       </section>
 
-      <section class="story-panel story-panel-image" id="about" aria-label="About Chef Palman poster">
-        <img src="assets/about-photo-portrait.jpg" alt="About Chef Palman poster" />
+      <!-- ══════════════════════════════ PANEL 2 · SERVICE AREA ══════════════════════════════ -->
+      <section class="panel panel-service" id="service">
+        <div class="panel-service__img-wrap">
+          <img
+            class="panel-service__img"
+            src="portfolio_ready_images/service_locationwithphot.png"
+            alt="Chef Palman – Catering Even in Small Villages"
+            draggable="false"
+          />
+        </div>
+        <ul class="location-tags" aria-label="Service locations">
+          <li class="location-tag" style="--d:0ms"   data-i18n="locDarjeeling">Darjeeling</li>
+          <li class="location-tag" style="--d:90ms"  data-i18n="locKalimpong">Kalimpong</li>
+          <li class="location-tag" style="--d:180ms" data-i18n="locKurseong">Kurseong</li>
+          <li class="location-tag" style="--d:270ms" data-i18n="locSikkim">Sikkim</li>
+          <li class="location-tag" style="--d:360ms" data-i18n="locSiliguri">Siliguri</li>
+          <li class="location-tag location-tag--home" style="--d:450ms" data-i18n="locHome">★ Lamahatta</li>
+        </ul>
+        <button class="scroll-nudge scroll-nudge--light" aria-label="Scroll down"
+          onclick="document.getElementById('chef').scrollIntoView({behavior:'smooth'})">
+          <span class="scroll-nudge__line"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
       </section>
 
-      <section class="story-panel story-panel-image" id="service" aria-label="Chef Palman service poster">
-        <img src="assets/service-mobile-crop.jpg" alt="Chef Palman service poster" />
+      <!-- ══════════════════════════════ PANEL 3 · CHEF PHOTO ══════════════════════════════ -->
+      <section class="panel panel-chef" id="chef">
+        <div class="panel-chef__bg" aria-hidden="true"></div>
+        <div class="panel-chef__img-wrap">
+          <img class="panel-chef__img" src="portfolio_ready_images/chef'sphoto.png" alt="Chef Palman – Portrait" draggable="false" />
+        </div>
+        <div class="chef-credentials" data-reveal>
+          <p class="chef-credentials__eyebrow" data-i18n="credEyebrow">His Journey</p>
+          <ul class="chef-credentials__list">
+            <li><span class="cred-dot"></span>Eagleton Resort</li>
+            <li><span class="cred-dot"></span>Taj Hotels</li>
+            <li><span class="cred-dot"></span>Shangri-La</li>
+            <li><span class="cred-dot"></span>Triboo</li>
+            <li><span class="cred-dot"></span>Goldfinch</li>
+          </ul>
+          <p class="chef-credentials__years">20+ <span data-i18n="credYears">Years</span></p>
+        </div>
+        <div class="chef-headline" data-reveal>
+          <p class="chef-headline__name" data-i18n="chefName">Chef Palman</p>
+          <p class="chef-headline__sub" data-i18n="chefSub">Executive Chef · Lamahatta, Darjeeling</p>
+        </div>
+        <button class="scroll-nudge" aria-label="Scroll down"
+          onclick="document.getElementById('book').scrollIntoView({behavior:'smooth'})">
+          <span class="scroll-nudge__line"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
       </section>
 
-      <section class="story-panel story-panel-info" id="info">
-        <div class="info-shell reveal" data-reveal>
-          <header class="info-topbar">
-            <a class="brand" href="#hero" aria-label="Back to top">
-              <span class="brand-mark">P</span>
-              <span class="brand-copy">
-                <span class="brand-title">Chef Palman</span>
-                <span class="brand-subtitle">Executive Chef</span>
-              </span>
+      <!-- ══════════════════════════════ PANEL 4 · BOOK & CONTACT ══════════════════════════════ -->
+      <section class="panel panel-book" id="book">
+        <div class="book-bg" aria-hidden="true"></div>
+        <div class="book-shell">
+
+          <!-- Hero row -->
+          <div class="book-hero-row" data-reveal>
+            <p class="book-eyebrow" data-i18n="bookEyebrow">Darjeeling Catering · From Lamahatta</p>
+            <h1 class="book-name" data-i18n="chefName">Chef Palman</h1>
+            <p class="book-lead" data-i18n="bookLead">Premium catering for every occasion — from intimate village feasts to grand destination weddings across the hills.</p>
+          </div>
+
+          <!-- Events accordion -->
+          <div class="events-section" data-reveal>
+            <p class="section-eyebrow" data-i18n="eventsTitle">What We Cater</p>
+            <div class="events-accordion">
+
+              <details class="event-group" open>
+                <summary class="event-group__title">
+                  <span data-i18n="cat1Title">💍 Weddings & Life Celebrations</span>
+                  <svg class="event-group__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <ul class="event-list">
+                  <li data-i18n="cat1i1">Weddings — village to luxury destination</li>
+                  <li data-i18n="cat1i2">Sangeet, Engagement & Reception</li>
+                  <li data-i18n="cat1i3">Annaprashan (first rice ceremony)</li>
+                  <li data-i18n="cat1i4">Baby showers & Naming ceremonies</li>
+                  <li data-i18n="cat1i5">Birthdays & Anniversaries</li>
+                  <li data-i18n="cat1i6">Gruhapravesh (house warming)</li>
+                </ul>
+              </details>
+
+              <details class="event-group">
+                <summary class="event-group__title">
+                  <span data-i18n="cat2Title">🪔 Rituals & Ceremonies</span>
+                  <svg class="event-group__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <ul class="event-list">
+                  <li data-i18n="cat2i1">Ghewa — 2–3 day Buddhist/Tamang death feast</li>
+                  <li data-i18n="cat2i2">Shraddha / Antyesti — pure Sattvic (13-day)</li>
+                  <li data-i18n="cat2i3">Dasgatra (10th-day purification)</li>
+                  <li data-i18n="cat2i4">Bandara / Matshyamukhi / Niyombhanga</li>
+                  <li data-i18n="cat2i5">Ekadasha Masika Shraddha (11-month)</li>
+                  <li data-i18n="cat2i6">Bhagawat Puran Puja (one-year anniversary)</li>
+                  <li data-i18n="cat2i7">Religious Pujas, Homam & Annadhanam</li>
+                </ul>
+              </details>
+
+              <details class="event-group">
+                <summary class="event-group__title">
+                  <span data-i18n="cat3Title">🌾 Indigenous Festivals & Feasts</span>
+                  <svg class="event-group__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <ul class="event-list">
+                  <li data-i18n="cat3i1">Sakela / Sakewa (Kirat Rai community)</li>
+                  <li data-i18n="cat3i2">Nwagi & Chasok Tangnam (Limbu harvest)</li>
+                  <li data-i18n="cat3i3">Namsoong & Nambun Faat (Lepcha New Year)</li>
+                  <li data-i18n="cat3i4">Losar (Tibetan New Year · Bhutia & Sherpa)</li>
+                  <li data-i18n="cat3i5">Saga Dawa, Pang Lhabsol, Bumchu</li>
+                  <li data-i18n="cat3i6">Dasai (Durga Puja) & Tihaar (Diwali)</li>
+                  <li data-i18n="cat3i7">Ban-Bhoj — outdoor jungle picnic feasts</li>
+                </ul>
+              </details>
+
+              <details class="event-group">
+                <summary class="event-group__title">
+                  <span data-i18n="cat4Title">🏢 Corporate & Community</span>
+                  <svg class="event-group__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <ul class="event-list">
+                  <li data-i18n="cat4i1">Government & office inaugurations</li>
+                  <li data-i18n="cat4i2">Corporate milestones & foundation days</li>
+                  <li data-i18n="cat4i3">Award nights, seminars & conferences</li>
+                  <li data-i18n="cat4i4">Homestay gatherings & tourist functions</li>
+                  <li data-i18n="cat4i5">Daily corporate canteen services</li>
+                </ul>
+              </details>
+
+            </div>
+          </div>
+
+          <!-- CTA buttons -->
+          <div class="book-actions" data-reveal>
+            <a class="cta-btn cta-btn--primary"
+               href="https://wa.me/917001683190?text=Hello%20Chef%20Palman,%20I%20want%20to%20book%20catering."
+               target="_blank" rel="noreferrer" id="ctaWhatsapp" data-i18n="ctaWhatsapp">
+              <svg class="cta-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              WhatsApp
             </a>
+            <a class="cta-btn cta-btn--secondary" href="tel:+917001683190" id="ctaCall">
+              <svg class="cta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.66A2 2 0 012 1h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              +91 70016 83190
+            </a>
+          </div>
 
-            <button
-              class="menu-button"
-              id="menuButton"
-              type="button"
-              aria-expanded="false"
-              aria-controls="menuPanel"
-              aria-label="Open navigation"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-          </header>
-
-          <nav class="menu-panel" id="menuPanel" aria-label="Section navigation">
-            <a href="#hero">Hero</a>
-            <a href="#about">About</a>
-            <a href="#service">Service</a>
-            <a href="#info">Info</a>
-          </nav>
-
-          <section class="info-card">
-            <p class="eyebrow">Darjeeling Catering</p>
-            <h1>Chef Palman</h1>
-            <p class="lead">
-              Executive chef now serving Darjeeling, Kalimpong, Kurseong, Sikkim, and Siliguri with premium catering.
+          <!-- Footer -->
+          <div class="book-footer" data-reveal>
+            <p class="book-footer__base">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <span data-i18n="footerBase">Lamahatta, Darjeeling · West Bengal</span>
             </p>
+            <p class="book-footer__copy">© 2025 Chef Palman Catering</p>
+          </div>
 
-            <div class="info-grid">
-              <article class="info-block">
-                <span>Experience</span>
-                <p>Eagelton, Taj, Sangrilla, Triboo, Goldflinch</p>
-              </article>
-              <article class="info-block">
-                <span>Base</span>
-                <p>Lamahatta, Darjeeling</p>
-              </article>
-              <article class="info-block">
-                <span>Best for</span>
-                <p>Private dinners, family feasts, village events, live grill counters</p>
-              </article>
-            </div>
-
-            <div class="action-row">
-              <a
-                class="action-button action-button-primary"
-                href="https://wa.me/917001683190?text=Hello%20Chef%20Palman,%20I%20want%20to%20book%20catering."
-                target="_blank"
-                rel="noreferrer"
-              >
-                WhatsApp
-              </a>
-              <a class="action-button" href="tel:+917001683190">+91 7001683190</a>
-            </div>
-
-            <div class="social-row">
-              <span>Facebook link space</span>
-              <span>Instagram link space</span>
-              <span>WhatsApp ready</span>
-            </div>
-          </section>
         </div>
       </section>
+
     </main>
 
     <script src="script.js"></script>
